@@ -24,8 +24,9 @@ class Config(object):
             'id': 'setReward',
             'func': 'app.tasks.planjob:set_reward',
             'args': "",
-            'trigger': 'interval',
-            'seconds': 5
+            'trigger': 'cron',
+            'hour': 0,
+            'minute': 20
         }
     ]
     SCHEDULER_API_ENABLED = True
