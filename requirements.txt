@@ -1,0 +1,2 @@
+hobbit-core[hobbit,hobbit_core]==1.4.4
+celery

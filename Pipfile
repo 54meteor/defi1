@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+pytest-env = "*"
+ipython = "*"
+flake8 = "*"
+ipdb = "*"
+
+[packages]
+hobbit-core = {extras = ["hobbit", "hobbit_core"], version = "==1.4.4"}
+celery = "*"
+pymysql = "*"
+flask-apscheduler = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
