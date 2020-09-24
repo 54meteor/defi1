@@ -19,7 +19,7 @@ class Config(object):
             'func': 'app.tasks.planjob:chain_search',
             'args': "",
             'trigger': 'interval',
-            'seconds': 5
+            'seconds': 1200
         },{
             'id': 'setReward',
             'func': 'app.tasks.planjob:set_reward',
@@ -27,6 +27,13 @@ class Config(object):
             'trigger': 'cron',
             'hour': 0,
             'minute': 20
+        },{
+            'id': 'Reward',
+            'func': 'app.tasks.planjob:reward',
+            'args': "",
+            'trigger': 'cron',
+            'hour': 0,
+            'minute': 10
         }
     ]
     SCHEDULER_API_ENABLED = True

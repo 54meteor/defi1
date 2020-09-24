@@ -1,3 +1,5 @@
+import os
+
 from web3 import Web3
 
 from app.contracts.ContractHandler import getMinerPool, setChainReward, setChainRewards
@@ -30,3 +32,10 @@ def set_reward():
             for reward in rewardList:
                 reward.hash_code = hash_code
                 RewardService.updateReward(reward)
+
+
+def reward():
+    os.system('/Users/liupeng/Documents/golang/defi/treecode')
+
+
+

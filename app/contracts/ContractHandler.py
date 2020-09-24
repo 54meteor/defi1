@@ -2,12 +2,13 @@ import json
 
 from web3 import Web3
 
-# w3 = Web3(Web3.HTTPProvider('https://ropsten.infura.io/v3/e0ec62bcaf8c48f280127c0aa347ca24'))
-w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
-# wallet_key = '7da5fec4819164669acf5b767dcfbc952ee3e58c0e5dc6b78ba0bedc55846650'
-wallet_key = '9a800c9eee984cfb81a5eb850a82bd3b376746daa7020a9eed00c29161530acc'
+w3 = Web3(Web3.HTTPProvider('https://ropsten.infura.io/v3/e0ec62bcaf8c48f280127c0aa347ca24'))
+# w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
+wallet_key = '7da5fec4819164669acf5b767dcfbc952ee3e58c0e5dc6b78ba0bedc55846650'
+# wallet_key = '9a800c9eee984cfb81a5eb850a82bd3b376746daa7020a9eed00c29161530acc'
 def getChainReward(address):
-    contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
+    # contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
+    contract_address = "0xC7Bb73B8A174a294ED3e0706b17C3c7e4FA15e74"
     checksum_address = w3.toChecksumAddress(contract_address)
     abi = """[
         {
@@ -186,9 +187,8 @@ def getChainReward(address):
 
 
 def setChainReward(address, amount):
-    contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
-    # w3 = Web3(Web3.HTTPProvider('https://ropsten.infura.io/v3/e0ec62bcaf8c48f280127c0aa347ca24'))
-    # w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
+    # contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
+    contract_address = "0xC7Bb73B8A174a294ED3e0706b17C3c7e4FA15e74"
     checksum_address = w3.toChecksumAddress(contract_address)
     abi = """[
         {
@@ -361,7 +361,8 @@ def setChainReward(address, amount):
             "type": "function"
         }
     ]"""
-    wallet_address = w3.toChecksumAddress("0xe58436F465ac6F32525fbFd75FE2e07181450155")
+    # wallet_address = w3.toChecksumAddress("0xe58436F465ac6F32525fbFd75FE2e07181450155")
+    wallet_address = w3.toChecksumAddress("0x3DE0771C7C8F158cEa4758d3e82e299a04768381")
     # wallet_address = w3.toChecksumAddress(address)
     czg = w3.eth.contract(address=checksum_address, abi=abi)
     reward =  Web3.toWei(amount, 'ether')
@@ -379,9 +380,8 @@ def setChainReward(address, amount):
 
 
 def getMinerPool(addr):
-    contract_address = "0xEc5aEbBD2F603b46b62A9d07166dAEcF5d64b22C"
-    # w3 = Web3(Web3.HTTPProvider('https://ropsten.infura.io/v3/e0ec62bcaf8c48f280127c0aa347ca24'))
-    # w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
+    # contract_address = "0xEc5aEbBD2F603b46b62A9d07166dAEcF5d64b22C"
+    contract_address = "0x955d66e1589c8e526c4d0790d8988d4e432624cb"
     checksum_address = w3.toChecksumAddress(contract_address)
     abi = """[
         {
@@ -511,9 +511,8 @@ def getMinerPool(addr):
 
 
 def setChainRewards(addressList, amountList):
-    contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
-    # w3 = Web3(Web3.HTTPProvider('https://ropsten.infura.io/v3/e0ec62bcaf8c48f280127c0aa347ca24'))
-    w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
+    # contract_address = "0x2556D96eFe5a902B0Bbb83659ef24687a70Eb766"
+    contract_address = "0xC7Bb73B8A174a294ED3e0706b17C3c7e4FA15e74"
     checksum_address = w3.toChecksumAddress(contract_address)
     abi = """[
         {
@@ -686,7 +685,7 @@ def setChainRewards(addressList, amountList):
             "type": "function"
         }
     ]"""
-    wallet_address = w3.toChecksumAddress("0xe58436F465ac6F32525fbFd75FE2e07181450155")
+    wallet_address = w3.toChecksumAddress("0x3DE0771C7C8F158cEa4758d3e82e299a04768381")
     # wallet_address = w3.toChecksumAddress(address)
     czg = w3.eth.contract(address=checksum_address, abi=abi)
     # reward =  Web3.toWei(amount, 'ether')
