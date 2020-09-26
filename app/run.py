@@ -24,6 +24,8 @@ class Config(object):
             'id': 'setReward',
             'func': 'app.tasks.planjob:set_reward',
             'args': "",
+            # 'trigger': 'interval',
+            # 'seconds': 10
             'trigger': 'cron',
             'hour': 0,
             'minute': 20

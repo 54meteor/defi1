@@ -7,6 +7,7 @@ from app.run import scheduler
 
 
 def chain_search():
+    print("chain_search")
     with scheduler.app.app_context():
         from app.services.pending_miner import PendingMinerService
         pendList = PendingMinerService.listByStatus()
