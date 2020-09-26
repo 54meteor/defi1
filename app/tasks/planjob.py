@@ -36,7 +36,7 @@ def set_reward():
 
 
 def reward():
-    os.system('/Users/liupeng/Documents/golang/defi/treecode')
+    os.system('/defi/treecode')
 
 
 
